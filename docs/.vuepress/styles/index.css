@@ -1,0 +1,11 @@
+.block {
+  display: block;
+  margin-left: 5px;
+}
+.pp {
+  color: var(--c-warning-text-accent);
+  font-size: x-large;
+}
+.details {
+  margin-left: 10px;
+}

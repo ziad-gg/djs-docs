@@ -1,0 +1,21 @@
+{
+  "name": "vuepress-starter",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "build": "public",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "Ziath#1768 <zemad3040@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-register-components": "^2.0.0-beta.62",
+    "vuepress": "^2.0.0-beta.62"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
