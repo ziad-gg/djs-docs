@@ -7,7 +7,7 @@ title: Validation
 ```js
 new Validation()
 ```
-_extends <a href="#">Base</a>_
+_extends <a href="/guide/BaseManager.html">Base</a>_
 
 
 <div style="display: flex; font-weight: 900;" class="mb">

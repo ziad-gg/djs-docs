@@ -9,18 +9,18 @@ Application is The main Hub for the Project
 ```js
 new Application(client, options)
 ```
-_extends <a href="#">Base</a>_
+_extends <a href="/guide/BaseManager.html">Base</a>_
 
 **Parameters:**
 ## @Client
 | Name           | Type                                                         | Description                    | Optional |
 | -------------- | ------------------------------------------------------------ | ------------------------------ | -------- |
-| `Client`       | [`client`](https://discord.js.org/#/docs/discord.js/main/class/Client) | The main Discord.js client     | true     |
+| `Client`       | [`client`](https://discord.js.org/#/docs/discord.js/main/class/Client) | The main Discord.js client     | false     |
 
 ## @options
 | Name           | Type                                                         | Description                    | Optional |
 | -------------- | ------------------------------------------------------------ | ------------------------------ | -------- |
-| `prefix` | [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Message command prefix | false     |
+| `prefix` | [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Message command prefix | true     |
 | `commandsPath` | [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Path to the commands folder    | true     |
 | `EventsPath`   | [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Path to the events folder      | false    |
 | `validationPath`|[`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Path to the validation folder  | false    |

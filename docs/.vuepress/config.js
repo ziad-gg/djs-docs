@@ -34,6 +34,14 @@ export default defineUserConfig({
           ],
           collapsible: false,
           activeMatch: true
+        },
+        {
+          text: "Manager",
+          children: [
+            '/guide/BaseManager.md',
+            '/guide/MessageManager.md',
+            '/guide/InteractionManager.md',
+          ]
         }
       ]
     },
