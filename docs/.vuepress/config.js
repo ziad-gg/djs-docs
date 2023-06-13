@@ -1,5 +1,10 @@
 import { defineUserConfig, defaultTheme } from 'vuepress';
+import { tocPlugin } from '@vuepress/plugin-toc';
+import { prismjsPlugin } from '@vuepress/plugin-prismjs';
+import { shikiPlugin } from '@vuepress/plugin-shiki';
+import { nprogressPlugin } from '@vuepress/plugin-nprogress';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+
 import path from 'node:path';
 
 
@@ -17,6 +22,14 @@ export default defineUserConfig({
   theme: defaultTheme({
     'logo': 'https://media.discordapp.net/attachments/942512293277757472/1109594448356200538/D.png?width=180&height=180',
     colorModeSwitch: true,
+    colorMode: 'auto',
+    repo: 'https://github.com/ziad-gg/handler.djs',
+    docsRepo: 'https://github.com/ziad-gg/djs-docs',
+    docsBranch: 'master',
+    docsDir: 'docs',
+    editLinkPattern: ':repo/edit/:branch/:path',
+    sidebarDepth: 1,
+    backToHome: "OOOps this Page is not found do you know what are you doing",
     sidebar: {
       '/': [
      
@@ -72,6 +85,17 @@ export default defineUserConfig({
   }),
   
   plugins: [
+    tocPlugin({
+      componentName: "All",
+    }),
+    prismjsPlugin({
+      preloadLanguages: ['markdown', 'jsdoc', 'yaml', 'tsdocs', 'ts']
+    }),
+    shikiPlugin({
+      theme: 'dark-plus',
+      langs: ['js', 'ts', 'bash', 'cmd']
+    }),
+    nprogressPlugin(),
     registerComponentsPlugin({
       components: {
         StartButton: path.join(__dirname, '/components/StartButton.vue')

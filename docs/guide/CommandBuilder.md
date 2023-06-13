@@ -15,38 +15,37 @@ _extends <a href="/guide/BaseManager.html">Base</a>_
   <div style="flex: 1;">
     <details class="details">
       <summary>PROPERTIES</summary>
-      <a href="#name" class="block">name</a> 
-      <a href="#description" class="block">description</a> 
-      <a href="#usage" class="block">usage</a> 
-      <a href="#examples" class="block">examples</a> 
-      <a href="#permissions" class="block">permissions</a> 
-      <a href="#int" class="block">int</a> 
-      <a href="#cooldown" class="block">cooldown</a> 
-      <a href="#owners" class="block">owners</a> 
-      <a href="#disabed" class="block">disabed</a> 
-      <a href="#category" class="block">category</a> 
+      <a href="#name" class="block">.name</a> 
+      <a href="#description" class="block">.description</a> 
+      <a href="#usage" class="block">.usage</a> 
+      <a href="#examples" class="block">.examples</a> 
+      <a href="#permissions" class="block">.permissions</a> 
+      <a href="#int" class="block">.int</a> 
+      <a href="#cooldown" class="block">.cooldown</a> 
+      <a href="#owners" class="block">.owners</a> 
+      <a href="#disabed" class="block">.disabed</a> 
+      <a href="#category" class="block">.category</a> 
      </details>
   </div>
   <div style="flex: 1;">
     <details class="details">
       <summary>Methods</summary>
-      <a href="#setName" class="block">setName()</a> 
-      <a href="#setDescription" class="block">setDescription()</a> 
-      <a href="#setUsage" class="block">setUsage()</a> 
-      <a href="#setExample" class="block">setExample()</a> 
-      <a href="#setCooldown" class="block">setCooldown()</a> 
-      <a href="#setCategory" class="block">setCategory()</a> 
-      <a href="#setMessageExecution" class="block">setMessageExecution()</a> 
-      <a href="#setInteractionExecution" class="block">setInteractionExecution()</a> 
-      <a href="#setGlobal" class="block">setGlobal()</a> 
-      <a href="#setAttr" class="block">setAttr()</a> 
-      <a href="#InteractionOn" class="block">InteractionOn()</a> 
-      <a href="#OwnersOnly" class="block">OwnersOnly()</a> 
-      <a href="#isSensitive" class="block">isSensitive()</a> 
-      <a href="#isSubCommand" class="block">isSubCommand()</a> 
-      <a href="#mergeCommands" class="block">mergeCommands()</a> 
-      <a href="#setSubGroupName" class="block">setSubGroupName()</a> 
-      <a href="#setSubcommands" class="block">setSubcommands()</a> 
+      <a href="#setName" class="block">.setName()</a> 
+      <a href="#setDescription" class="block">.setDescription()</a> 
+      <a href="#setUsage" class="block">.setUsage()</a> 
+      <a href="#setExample" class="block">.setExample()</a> 
+      <a href="#setCooldown" class="block">.setCooldown()</a> 
+      <a href="#setCategory" class="block">.setCategory()</a> 
+      <a href="#setMessageExecution" class="block">.setMessageExecution()</a> 
+      <a href="#setInteractionExecution" class="block">.setInteractionExecution()</a> 
+      <a href="#setGlobal" class="block">.setGlobal()</a> 
+      <a href="#setAttr" class="block">.setAttr()</a> 
+      <a href="#getAttr" class="block">.getAttr()</a> 
+      <a href="#InteractionOn" class="block">.InteractionOn()</a> 
+      <a href="#OwnersOnly" class="block">.OwnersOnly()</a> 
+      <a href="#isSensitive" class="block">.isSensitive()</a> 
+      <a href="#isSubCommand" class="block">.isSubCommand()</a> 
+      <a href="#setSubcommands" class="block">.setSubcommands()</a> 
     </details>
   </div>
 </div>
@@ -134,8 +133,9 @@ _extends <a href="/guide/BaseManager.html">Base</a>_
   Description | [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | command Description 
 
  Retuns `CommandBuilder`
- 
- Note Description is Required while register a slash command
+ ::: tip Note
+  Description is Required while register a slash command
+ :::
 
  Example:
  ```js
@@ -209,7 +209,6 @@ _extends <a href="/guide/BaseManager.html">Base</a>_
   const Command = new CommandBuilder().setCategory('public')
 ```
 <hr>
-
 
 <h6 class="pp" id="setMessageExecution">.setMessageExecution(Execute)</h6>
 
@@ -326,7 +325,6 @@ _extends <a href="/guide/BaseManager.html">Base</a>_
  ------------------------------------------------------------ | ------------------------------ | -------- |
   key | [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | key
   value | `any` |  value
-  Retuns `CommandBuilder`
    
 
   @return `any`
@@ -342,3 +340,107 @@ _extends <a href="/guide/BaseManager.html">Base</a>_
  }
 
 ```
+<hr>
+
+<h6 class="pp" id="getAttr">.getAttr(key)</h6>
+
+   PARAMETER | TYPE    | DESCRIPTION |
+ ------------------------------------------------------------ | ------------------------------ | -------- |
+  key | [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) | saved Key
+
+ ::: tip 
+   You Can Use Attr After [Set It](/docs/guide/CommandBuilder.md#setAttr) 
+ :::
+
+  Retuns [any]
+
+ Example:
+ ```js
+ await message.getUser('welcome') // Hello sir How Are You
+ ```
+<hr>
+
+<h6 class="pp" id="OwnersOnly">.OwnersOnly()</h6>
+
+
+ @return `this`
+
+ ::: tip description
+ This method is used to set the commmand for [owners](Application.md#owners) only you 
+ :::
+
+ Example:
+ ```js {3}
+ const { SlashCommandBuilder } = require('discord.js');
+
+ const Command = new CommandBuilder().OwnersOnly() 
+```
+
+<hr>
+
+<h6 class="pp" id="isSensitive">.isSensitive()</h6>
+
+
+ @return `this`
+
+ ::: tip description
+ This method is used to make the command name char Sensitive means it will work when the user write the exactly name of the command  
+ :::
+
+ Example:
+ ```js {3-4}
+ const { SlashCommandBuilder } = require('discord.js');
+
+ const Command = new CommandBuilder().setName('Ping').isSensitive() // write Ping to Run
+ const Command = new CommandBuilder().setName('Ping') // write Ping in upper case or lower case to Run
+```
+
+<hr>
+
+<h6 class="pp" id="isSubCommand">.isSubCommand()</h6>
+
+
+ @return `this`
+
+ ::: tip description
+ When you use this method this means that this command is a sub command not a main command
+ if you used this function this command will only register when you use it as a sub command in 
+ a main command
+ :::
+
+ Example:
+ ```js {3}
+ const { SlashCommandBuilder } = require('discord.js');
+
+ const Command = new CommandBuilder().isSubCommand() 
+```
+
+
+<hr>
+
+<h6 class="pp" id="setSubcommands">.setSubcommands(options[])</h6>
+
+  PARAMETER | TYPE    | DESCRIPTION |
+ ------------------------------------------------------------ | ------------------------------ | -------- |
+  command   | [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | this option is sub command name
+  group?   | [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | this option is sub command group name
+
+
+ @return `this`
+
+ ::: tip description
+   command must be set as a sub command
+ :::
+
+ Example:
+ ```js {3-8}
+ const { SlashCommandBuilder } = require('discord.js');
+
+ const Command = new CommandBuilder()
+ .setSubcommands([
+  { command: 'set', group: 'users' }
+  { command: 'set'}
+ ]) 
+```
+
+  <!-- <Toc :headers="headers" :options="options" /> -->

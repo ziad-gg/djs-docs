@@ -33,7 +33,9 @@ _extends <a href="https://discord.js.org/#/docs/discord.js/main/class/MessageMan
       <a href="/guide/Application" class="block">Application</a> 
       <a href="/guide/Application#prefix" class="block">prefix</a> 
       <a href="/guide/CommandBuilder#name" class="block">cmdName</a> 
-      <a href="/guide/CommandBuilder" class="block">Command</a> 
+      <a href="/guide/CommandBuilder#Command" class="block">Command</a> 
+      <a href="#GroupName" class="block">GroupName</a> 
+      <a href="#GroupChildName" class="block">GroupChildName</a> 
     </details>
   </div>
   <div style="flex: 1;">
@@ -43,6 +45,7 @@ _extends <a href="https://discord.js.org/#/docs/discord.js/main/class/MessageMan
       <a href="#sendTimedMessage" class="block">sendTimedMessage</a> 
       <a href="#getUser" class="block">getUser</a> 
       <a href="#getData" class="block">getData</a> 
+      <a href="/guide/CommandBuilder#getAttr" target="_blank" class="block">getAttr</a> 
       <a href="https://discord.js.org/#/docs/discord.js/main/class/CommandInteraction?scrollTo=followUp" target="_blank" class="block">followUp</a> 
     </details>
   </div>
@@ -58,6 +61,26 @@ _extends <a href="https://discord.js.org/#/docs/discord.js/main/class/MessageMan
     message.slice(0, 2) // that will return array with sliced Args
   ```
 :::
+
+## **Properties**
+
+
+<h6 class="pp" id="GroupName">.GroupName</h6>
+
+ ::: tip description 
+ this property will work when you run a sub command with type [2](https://discord.com/developers/docs/interactions/application-commands#subcommands-and-subcommand-groups)
+ :::
+
+ Retuns [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+<hr>
+<h6 class="pp" id="GroupChildName">.GroupChildName</h6>
+
+ ::: tip description 
+ this property will work when you run a sub command with type [1 and 2](https://discord.com/developers/docs/interactions/application-commands#subcommands-and-subcommand-groups)
+ :::
+ 
+ Retuns [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+<hr>
 
 ## **Methods**
  <h6 class="pp" id="replyNoMention">.replyNoMention(options)</h6>
