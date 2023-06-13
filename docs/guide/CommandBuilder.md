@@ -30,17 +30,23 @@ _extends <a href="/guide/BaseManager.html">Base</a>_
   <div style="flex: 1;">
     <details class="details">
       <summary>Methods</summary>
-      <a href="#setName" class="block">setName</a> 
-      <a href="#setDescription" class="block">setDescription</a> 
-      <a href="#setUsage" class="block">setUsage</a> 
-      <a href="#setExample" class="block">setExample</a> 
-      <a href="#setCooldown" class="block">setCooldown</a> 
-      <a href="#setCategory" class="block">setCategory</a> 
-      <a href="#setMessageExecution" class="block">setMessageExecution</a> 
-      <a href="#setInteractionExecution" class="block">setInteractionExecution</a> 
-      <a href="#setGlobal" class="block">setGlobal</a> 
-      <a href="#setAttr" class="block">setAttr</a> 
-      <a href="#InteractionOn" class="block">InteractionOn</a> 
+      <a href="#setName" class="block">setName()</a> 
+      <a href="#setDescription" class="block">setDescription()</a> 
+      <a href="#setUsage" class="block">setUsage()</a> 
+      <a href="#setExample" class="block">setExample()</a> 
+      <a href="#setCooldown" class="block">setCooldown()</a> 
+      <a href="#setCategory" class="block">setCategory()</a> 
+      <a href="#setMessageExecution" class="block">setMessageExecution()</a> 
+      <a href="#setInteractionExecution" class="block">setInteractionExecution()</a> 
+      <a href="#setGlobal" class="block">setGlobal()</a> 
+      <a href="#setAttr" class="block">setAttr()</a> 
+      <a href="#InteractionOn" class="block">InteractionOn()</a> 
+      <a href="#OwnersOnly" class="block">OwnersOnly()</a> 
+      <a href="#isSensitive" class="block">isSensitive()</a> 
+      <a href="#isSubCommand" class="block">isSubCommand()</a> 
+      <a href="#mergeCommands" class="block">mergeCommands()</a> 
+      <a href="#setSubGroupName" class="block">setSubGroupName()</a> 
+      <a href="#setSubcommands" class="block">setSubcommands()</a> 
     </details>
   </div>
 </div>

@@ -12,10 +12,10 @@ export default defineUserConfig({
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['link', { rel: 'stylesheet', href: '/styles/index.css' }],
-    ['link', { rel: 'icon', href: 'https://styles.redditmedia.com/t5_3eu72/styles/communityIcon_mkcebxqhkfs41.png' }]
+    ['link', { rel: 'icon', href: 'https://media.discordapp.net/attachments/942512293277757472/1109594448356200538/D.png?width=180&height=180' }]
   ],
   theme: defaultTheme({
-    'logo': 'https://styles.redditmedia.com/t5_3eu72/styles/communityIcon_mkcebxqhkfs41.png',
+    'logo': 'https://media.discordapp.net/attachments/942512293277757472/1109594448356200538/D.png?width=180&height=180',
     colorModeSwitch: true,
     sidebar: {
       '/': [
